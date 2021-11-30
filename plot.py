@@ -2,6 +2,7 @@ import matplotlib.pyplot as plt
 import numpy as np
 import os
 
+
 if __name__ == "__main__":
     store_root = 'results'
     k_list = [20, 50]
