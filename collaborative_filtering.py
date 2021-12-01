@@ -19,11 +19,11 @@ def similarity(train_mat):
 
 
 def score_infer(sim, train_mat):
-    # 取相似度矩阵和测试及矩阵相乘等价于用户相似度向量和用户评分向量点乘求得分子
+    # 取相似度矩阵和测试集矩阵相乘等价于用户相似度向量和用户评分向量点乘求得分子
     score = np.matmul(sim, train_mat)
     # 计算某用户与其他用户相似度之和作为分母，应注意减去自身与自身的相似度“1”
     sim_sum = (sim.sum(axis=0) - 1).reshape(-1, 1)
-    # 求得评分矩阵
+    # 利用广播机制求得评分矩阵
     score = score / sim_sum
 
     return score
