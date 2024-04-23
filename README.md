@@ -1,1 +1,2 @@
-# matrix_decomposition
+# Matrix Decomposition
+An assignment implementation for matrix decomposition.
